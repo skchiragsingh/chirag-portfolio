@@ -1,4 +1,4 @@
-import { ArrowUpRight, Github, Linkedin, Cpu } from "lucide-react";
+import { Github, Linkedin, Cpu, MessageCircle } from "lucide-react";
 
 export default function Projects() {
   const skills = [
@@ -6,7 +6,7 @@ export default function Projects() {
     "Seaborn", "Scikit-learn", "Streamlit", "Docker", "AI/ML"
   ];
 
-  const skillColors: { [key: string]: string } = {
+  const badgeColors: { [key: string]: string } = {
     "Python": "#3776AB",
     "Pandas": "#150458",
     "NumPy": "#013243",
@@ -14,9 +14,9 @@ export default function Projects() {
     "Seaborn": "#4C9BE8",
     "Scikit-learn": "#F7931E",
     "Streamlit": "#FF4B4B",
-    "Docker": "#2496ED",
-    "AI/ML": "#8B5CF6"
+    "Docker": "#2496ED"
   };
+
 
   return (
     <section className="relative z-20 bg-black min-h-screen pt-32 pb-24 px-8 md:px-24 border-t border-neutral-900">
@@ -43,11 +43,11 @@ export default function Projects() {
 
               <div className="flex flex-wrap gap-3">
                 {["Python", "Scikit-learn", "Pandas", "NumPy", "Streamlit", "Docker"].map((tech) => (
-                  <span 
-                    key={tech} 
+                  <span
+                    key={tech}
                     className="px-5 py-2.5 rounded-full text-sm text-white font-medium border border-white/10 transition-transform duration-300 hover:scale-105"
                     style={{
-                      backgroundColor: skillColors[tech] || '#333'
+                      backgroundColor: badgeColors[tech] || '#333'
                     }}
                   >
                     {tech}
@@ -57,7 +57,7 @@ export default function Projects() {
             </div>
 
             <div className="w-full md:w-auto flex items-center justify-start md:justify-end mt-8 md:mt-0 gap-6">
-              <a 
+              <a
                 href="https://github.com/skchiragsingh/ai-assisted-marks-analyzer"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -66,9 +66,6 @@ export default function Projects() {
               >
                 <Github className="w-7 h-7 opacity-70 hover:opacity-100 transition-opacity" />
               </a>
-              <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all duration-500 cursor-pointer group-hover:scale-110">
-                <ArrowUpRight className="w-8 h-8 opacity-70 group-hover:opacity-100 transition-opacity" />
-              </div>
             </div>
           </div>
         </div>
@@ -80,12 +77,9 @@ export default function Projects() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-10 tracking-tight">Core Expertise</h2>
             <div className="flex flex-wrap gap-4">
               {skills.map((skill) => (
-                <span 
-                  key={skill} 
-                  className="px-6 py-3 rounded-2xl text-white text-lg font-medium border border-white/10 transition-transform duration-300 hover:scale-[1.02]"
-                  style={{
-                    backgroundColor: skillColors[skill] || '#333'
-                  }}
+                <span
+                  key={skill}
+                  className="px-6 py-3 rounded-2xl text-white text-lg font-medium border border-white/10 bg-transparent transition-transform duration-300 hover:scale-[1.02]"
                 >
                   {skill}
                 </span>
@@ -101,7 +95,7 @@ export default function Projects() {
             </p>
             <div className="flex gap-6">
               <a
-                href="https://github.com/skchiragsingh/ai-assisted-marks-analyzer"
+                href="https://github.com/skchiragsingh"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-5 rounded-full bg-neutral-900 border border-white/10 text-white hover:bg-white hover:text-black hover:scale-105 transition-all duration-300 shadow-lg"
@@ -115,6 +109,14 @@ export default function Projects() {
                 className="p-5 rounded-full bg-neutral-900 border border-white/10 text-white hover:bg-[#0A66C2] hover:border-[#0A66C2] hover:scale-105 transition-all duration-300 shadow-lg"
               >
                 <Linkedin className="w-7 h-7" />
+              </a>
+              <a
+                href="https://wa.me/8287746942"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-5 rounded-full bg-neutral-900 border border-white/10 text-white hover:bg-[#25D366] hover:border-[#25D366] hover:scale-105 transition-all duration-300 shadow-lg"
+              >
+                <MessageCircle className="w-7 h-7" />
               </a>
             </div>
           </div>
