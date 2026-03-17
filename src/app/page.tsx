@@ -11,9 +11,9 @@ export default function Home() {
       <Projects />
       
       {/* Footer */}
-      <footer className="bg-black py-12 border-t border-neutral-900 text-center">
+      <footer className="bg-black py-12 border-t border-neutral-900 text-center relative z-20">
         <p className="text-neutral-500 font-light tracking-widest uppercase text-sm">
-          © 2026 Creative Developer. All rights reserved.
+          © {new Date().getFullYear()} Chirag Singh. All rights reserved.
         </p>
       </footer>
     </main>
