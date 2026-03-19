@@ -9,12 +9,18 @@ export default function Overlay() {
       <div className="h-screen flex flex-col items-center justify-center p-8 text-center sticky top-0" style={{ position: 'static' }}>
         <motion.h1
           className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white drop-shadow-lg"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 1, ease: "easeOut" }}
-          viewport={{ once: false }}
         >
-          Chirag Singh
+          <motion.span
+            style={{ display: "inline-block" }}
+            animate={{ y: [0, -18, 0] }}
+            transition={{ duration: 3, ease: "easeInOut", repeat: Infinity, repeatType: "loop" }}
+          >
+            Chirag Singh
+          </motion.span>
         </motion.h1>
         <motion.p
           className="mt-6 text-2xl md:text-4xl text-neutral-300 max-w-3xl font-light tracking-wide"
@@ -23,7 +29,7 @@ export default function Overlay() {
           transition={{ duration: 1, delay: 0.3 }}
           viewport={{ once: false }}
         >
-          AI & Data Science Developer.
+          AI Engineer.
         </motion.p>
       </div>
 
@@ -82,3 +88,4 @@ export default function Overlay() {
     </div>
   );
 }
+
